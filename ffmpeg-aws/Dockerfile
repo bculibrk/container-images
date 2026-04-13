@@ -6,7 +6,7 @@ RUN apt-get -qq -y update && apt-get install -qq -y --no-install-recommends -y \
     unzip \
     ca-certificates \
     && curl -s "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" \
-    && unzip awscliv2.zip \
+    && unzip -qq awscliv2.zip \
     && ./aws/install -i /usr/local/aws-cli -b /usr/local/bin \
     && rm -rf awscliv2.zip aws \
     && apt-get clean \
