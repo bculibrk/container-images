@@ -1,7 +1,7 @@
 FROM ghcr.io/jrottenberg/ffmpeg:8.1-ubuntu
 
 # Install AWS CLI v2
-RUN apt-get update && apt-get install --no-install-recommends -y \
+RUN apt-get -qq -y update && apt-get install -qq -y --no-install-recommends -y \
     curl \
     unzip \
     ca-certificates \
