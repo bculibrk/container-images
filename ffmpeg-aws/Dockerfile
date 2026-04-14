@@ -15,4 +15,5 @@ RUN apt-get -qq -y update && apt-get install -qq -y --no-install-recommends -y \
 RUN /usr/local/bin/aws --version
 
 # Set the entrypoint
-ENTRYPOINT ["/bin/bash"]
+ENTRYPOINT ["/bin/sh"]
+CMD ["-c"]
